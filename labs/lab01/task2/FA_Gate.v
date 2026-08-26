@@ -5,9 +5,8 @@ module FA_Gate(
     input b,
     input cin
 );
-    wire c1, c2, c3; // internal wires connecting the gates
-
-    // Part (a): Constant delays of 2 for every gate
+    wire c1, c2, c3;
+    
     xor #(2) (c1, a, b);
     and #(2) (c2, a, b);
     xor #(2) (sum, cin, c1);

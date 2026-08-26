@@ -5,10 +5,7 @@ module ripple_adder(
     input [3:0] b,
     input cin
 );
-    wire c1, c2, c3; // Wires to carry the bit over to the next adder
-
-    // Instantiating 4 full adders and chaining the carry-outs to the carry-ins
-    // Format: FA_Gate instance_name (sum, cout, a, b, cin);
+    wire c1, c2, c3;
     
     FA_Gate fa0 (sum[0], c1, a[0], b[0], cin);
     FA_Gate fa1 (sum[1], c2, a[1], b[1], c1);
